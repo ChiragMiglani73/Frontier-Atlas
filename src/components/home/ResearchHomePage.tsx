@@ -292,21 +292,23 @@ function PaperThumbnail({ thumbUrl, href }: { thumbUrl: string; href: string }) 
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Open paper"
-      className="w-full max-h-[180px] sm:max-h-[220px] md:max-h-none md:w-[180px] lg:w-[200px] md:min-w-[150px] lg:min-w-[180px] self-stretch rounded-lg overflow-hidden flex-shrink-0 shadow-sm order-1 md:order-none group bg-[#f9f9f9] border border-[#e0ddd6] transition-colors hover:border-[#D94F1E] flex items-center justify-center"
+      className="w-full md:w-[180px] lg:w-[200px] md:min-w-[150px] lg:min-w-[180px] rounded-lg overflow-hidden flex-shrink-0 shadow-sm order-1 md:order-none group bg-[#EDEAE3] border border-[#e0ddd6] transition-colors hover:border-[#D94F1E]"
     >
-      <img
-        src={thumbUrl}
-        alt="Paper thumbnail"
-        className="w-full h-auto md:h-full object-contain md:object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
-        loading="lazy"
-        onError={(e) => {
-          const t = e.target as HTMLImageElement;
-          t.style.display = "none";
-          const p = t.parentElement;
-          if (p)
-            p.innerHTML = `<div class="w-full h-full min-h-[200px] bg-[#f9f9f9] flex items-center justify-center text-[#888888] text-[11px]">Preview</div>`;
-        }}
-      />
+      <div className="relative w-full h-[160px] sm:h-[180px] md:h-auto md:aspect-[3/4]">
+        <img
+          src={thumbUrl}
+          alt="Paper thumbnail"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
+          loading="lazy"
+          onError={(e) => {
+            const t = e.target as HTMLImageElement;
+            t.style.display = "none";
+            const p = t.parentElement;
+            if (p)
+              p.innerHTML = `<div class="absolute inset-0 bg-[#EDEAE3] flex items-center justify-center text-[#888888] text-[11px]">Preview</div>`;
+          }}
+        />
+      </div>
     </Link>
   );
 }
@@ -522,28 +524,30 @@ function PaperCard(p: Paper) {
       </div>
 
       {/* ── Mobile stat row ── */}
-      <div className="flex md:hidden flex-row items-stretch justify-start gap-3 sm:gap-4 order-3 pt-2 border-t border-[#f0f0f0]">
-        <StatItem
-          icon={
-            <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5">
+      <div className="flex md:hidden flex-row items-center justify-between order-3 pt-3 border-t border-[#f0f0f0]">
+        <div className="flex items-center gap-4 sm:gap-6">
+          {/* Upvotes */}
+          <a href="#" className="flex items-center gap-1.5 text-[#D94F1E]">
+            <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5">
               <path d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
             </svg>
-          }
-          value={p.upvotes}
-          label="Upvotes"
-          accent
-        />
-        <StatItem
-          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#888888]"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>}
-          value={p.repos} label="Repo"
-        />
-        <StatItem
-          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>}
-          value={p.citations} label="Citations"
-        />
-        <div className="ml-auto flex items-center">
-          <BookmarkButton />
+            <span className="font-semibold text-sm">{p.upvotes}</span>
+            <span className="text-xs text-[#888888]">Upvotes</span>
+          </a>
+          {/* Repo */}
+          <a href="#" className="flex items-center gap-1.5 text-[#111111]">
+            <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>
+            <span className="font-semibold text-sm">{p.repos}</span>
+            <span className="text-xs text-[#888888]">Repo</span>
+          </a>
+          {/* Citations */}
+          <a href="#" className="flex items-center gap-1.5 text-[#111111]">
+            <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>
+            <span className="font-semibold text-sm">{p.citations}</span>
+            <span className="text-xs text-[#888888]">Citations</span>
+          </a>
         </div>
+        <BookmarkButton />
       </div>
     </div>
   );
@@ -558,33 +562,58 @@ export default function ResearchHomePage() {
     <div className="min-h-screen font-[Inter]">
       <div className="max-w-[1320px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 pb-6 sm:pb-8 lg:pb-12">
 
-        {/* Hero row - explicit breakpoints: 1 col mobile, 2 cols sm/md, 4 cols lg+ */}
-        <div className="pt-4 sm:pt-6">
+        {/* Hero cards - hidden on mobile, visible on md+ */}
+        <div className="hidden md:block pt-4 sm:pt-6">
           <div 
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-4 sm:mb-6"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-4 sm:mb-6"
           >
             <BreakthroughCard />
             <RisingFastCard />
             <NewSotaCard />
             <TrendingGithubCard />
           </div>
+        </div>
 
-          {/* Tabs - also full width */}
-          <div className="flex items-center gap-0 border-b border-[#e5e5e5] overflow-x-auto mb-4 sm:mb-6 scrollbar-hide">
-            {TABS.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`pb-2 sm:pb-2.5 px-2 sm:px-3 lg:px-4 text-xs sm:text-sm font-medium transition-colors relative whitespace-nowrap flex-shrink-0 ${
-                  activeTab === tab ? "text-[#D94F1E] font-semibold" : "text-[#888888] hover:text-[#D94F1E]"
-                }`}
-              >
-                {tab}
-                {activeTab === tab && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D94F1E] rounded-t-full" />
-                )}
-              </button>
-            ))}
+        {/* Time filter tabs - mobile: pills, desktop: underline */}
+        <div className="pt-4 sm:pt-6">
+          {/* Mobile: pill buttons */}
+          <div className="flex md:hidden items-center justify-between mb-4">
+            <div className="flex items-center gap-1.5">
+              {TABS.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
+                    activeTab === tab
+                      ? "bg-[#D94F1E] text-white"
+                      : "text-[#888888] hover:text-[#111111]"
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop: underline tabs */}
+          <div className="hidden md:flex items-center justify-between mb-4 sm:mb-6">
+            <div className="flex items-center gap-0 border-b border-[#e5e5e5]">
+              {TABS.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`pb-2.5 px-4 text-sm font-medium transition-colors relative whitespace-nowrap flex-shrink-0 ${
+                    activeTab === tab ? "text-[#D94F1E] font-semibold" : "text-[#888888] hover:text-[#D94F1E]"
+                  }`}
+                >
+                  {tab}
+                  {activeTab === tab && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D94F1E] rounded-t-full" />
+                  )}
+                </button>
+              ))}
+            </div>
+            <span className="text-sm text-[#888888]">30 papers</span>
           </div>
         </div>
 
