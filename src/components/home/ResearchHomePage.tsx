@@ -22,7 +22,6 @@ function BreakthroughCard() {
       }}
     >
       <div className="flex items-center gap-2 mb-3 flex-wrap">
-        {/* FIX: flame emoji stays, label text is orange (#F97316) */}
         <span className="text-sm flex-shrink-0">🔥</span>
         <span className="text-[11px] font-semibold tracking-wider uppercase text-[#F97316] whitespace-nowrap">
           BREAKTHROUGH TODAY
@@ -61,7 +60,6 @@ function BreakthroughCard() {
           "Lower latency, higher accuracy",
         ].map((point) => (
           <div key={point} className="flex items-center gap-2 text-[11px] lg:text-[12px] text-[#888888]">
-            {/* FIX: star icon is orange #F97316 */}
             <svg viewBox="0 0 16 16" className="w-3 h-3 flex-shrink-0 text-[#F97316]" fill="currentColor">
               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
             </svg>
@@ -86,7 +84,6 @@ function RisingFastCard() {
   return (
     <div className="rounded-xl p-4 lg:p-5 flex flex-col h-full bg-white border border-[#e5e5e5]">
       <div className="flex items-center gap-2 mb-5">
-        {/* FIX: arrow icon is orange #F97316 */}
         <svg viewBox="0 0 16 16" className="w-10 h-10 text-[#F97316] flex-shrink-0" fill="currentColor">
           <path d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
         </svg>
@@ -102,7 +99,6 @@ function RisingFastCard() {
             <span className="text-sm text-[#888888] w-4 flex-shrink-0">{item.rank}</span>
             <span className="text-sm text-[#555555] flex-1 min-w-0 truncate">{item.name}</span>
             <span className="text-sm font-semibold text-[#111111] flex-shrink-0">{item.stars}</span>
-            {/* FIX: star is orange #F97316 */}
             <span className="text-[#F97316] text-base flex-shrink-0">★</span>
           </div>
         ))}
@@ -125,7 +121,6 @@ function NewSotaCard() {
     <div className="rounded-xl p-4 lg:p-5 flex flex-col h-full bg-white border border-[#e5e5e5]">
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2">
-          {/* FIX: trophy emoji — orange tint via filter or just keep emoji as-is (naturally orange) */}
           <span className="text-base">🏆</span>
           <span className="text-[11px] font-semibold tracking-wider uppercase text-[#555555]">NEW SOTA TODAY</span>
         </div>
@@ -157,7 +152,6 @@ function TrendingGithubCard() {
   return (
     <div className="rounded-xl p-4 lg:p-5 flex flex-col bg-white border border-[#e5e5e5]">
       <div className="flex items-center gap-3 mb-4">
-        {/* FIX: header GitHub icon is dark #111111 */}
         <svg viewBox="0 0 16 16" className="w-5 h-5 text-[#111111] flex-shrink-0" fill="currentColor">
           <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
         </svg>
@@ -166,13 +160,11 @@ function TrendingGithubCard() {
       <div className="space-y-3">
         {items.map((item, i) => (
           <div key={i} className="flex items-center gap-2">
-            {/* FIX: per-row GitHub icons are dark #111111 (not gray #888888) */}
             <svg viewBox="0 0 16 16" className="w-4 h-4 text-[#111111] flex-shrink-0" fill="currentColor">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
             <span className="text-[13px] text-[#555555] flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
             <span className="text-[13px] text-[#888888] font-medium flex-shrink-0">{item.stars}</span>
-            {/* FIX: star icons are dark #111111 (was near-white #f0f0f0) */}
             <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 text-[#111111] flex-shrink-0" fill="currentColor">
               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
             </svg>
@@ -409,6 +401,33 @@ function SotaRow({
   );
 }
 
+// ── Bookmark icon ─────────────────────────────────────────────
+
+function BookmarkButton() {
+  const [saved, setSaved] = useState(false);
+  return (
+    <button
+      onClick={() => setSaved((s) => !s)}
+      aria-label={saved ? "Remove bookmark" : "Bookmark paper"}
+      className="flex items-center justify-center w-7 h-7 rounded-md transition-colors hover:bg-[#f5f5f5] text-[#c0c0c0] hover:text-[#888888]"
+    >
+      <svg
+        viewBox="0 0 16 16"
+        className="w-4 h-4"
+        fill={saved ? "#E8442A" : "none"}
+        stroke={saved ? "#E8442A" : "currentColor"}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v12l-5-3-5 3V2.5z" />
+      </svg>
+    </button>
+  );
+}
+
+// ── Stat item ─────────────────────────────────────────────────
+
 function StatItem({
   icon,
   value,
@@ -423,7 +442,7 @@ function StatItem({
   return (
     <a
       href="#"
-      className="flex flex-col items-end gap-0.5 w-full py-3 border-b border-[#f0f0f0] last:border-b-0 transition-opacity hover:opacity-80"
+      className="flex flex-col items-end gap-0.5 w-full py-4 border-b border-[#f0f0f0] last:border-b-0 transition-opacity hover:opacity-80"
     >
       <div className={`flex items-center gap-1.5 ${accent ? "text-[#E8442A]" : "text-[#111111]"}`}>
         {icon}
@@ -478,8 +497,14 @@ function PaperCard(p: Paper) {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-shrink-0 items-center order-3 w-[85px]">
+      {/* ── Desktop stat column ── */}
+      <div className="hidden md:flex flex-shrink-0 items-start order-3 w-[90px]">
         <div className="flex flex-col items-stretch w-full border-l border-[#f0f0f0] pl-4 lg:pl-5">
+          {/* Bookmark sits flush top-right */}
+          <div className="flex justify-end mb-1">
+            <BookmarkButton />
+          </div>
+
           <StatItem
             icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5"><path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" /></svg>}
             value={p.upvotes} label="Upvotes" accent
@@ -495,6 +520,7 @@ function PaperCard(p: Paper) {
         </div>
       </div>
 
+      {/* ── Mobile stat row ── */}
       <div className="flex md:hidden flex-row items-stretch justify-start gap-4 sm:gap-6 order-3 pt-2 border-t border-[#f0f0f0]">
         <StatItem
           icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5"><path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" /></svg>}
@@ -508,6 +534,9 @@ function PaperCard(p: Paper) {
           icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>}
           value={p.citations} label="Citations"
         />
+        <div className="ml-auto flex items-center">
+          <BookmarkButton />
+        </div>
       </div>
     </div>
   );
