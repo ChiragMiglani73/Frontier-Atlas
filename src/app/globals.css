@@ -8,11 +8,11 @@
   --color-brand-red: #E8442A;
   --color-brand-orange: #F97316;
 
-  --color-bg: #ffffff;
-  --color-surface: #f9f9f9;
-  --color-surface-hover: #f3f3f3;
-  --color-border: #e5e5e5;
-  --color-border-light: #f0f0f0;
+  --color-bg: #FAF0EA;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5ede6;
+  --color-border: #e8ddd6;
+  --color-border-light: #f0e8e0;
 
   --color-text-primary: #111111;
   --color-text-secondary: #555555;
@@ -31,8 +31,7 @@
   padding: 0;
 }
 
-html,
-body {
+html, body {
   font-family: var(--font-inter);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
@@ -42,17 +41,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 3px;
-}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
 
 .tag-chip {
   display: inline-flex;
@@ -87,8 +78,7 @@ body {
 }
 
 .nav-active {
-  background-color: #fef2f0;
-  color: var(--color-brand-red);
+  color: var(--color-brand-orange);
   font-weight: 600;
 }
 
@@ -124,10 +114,5 @@ body {
   overflow: hidden;
 }
 
-.z-45 {
-  z-index: 45;
-}
-
-.duration-250 {
-  transition-duration: 250ms;
-}
+.z-45 { z-index: 45; }
+.duration-250 { transition-duration: 250ms; }
