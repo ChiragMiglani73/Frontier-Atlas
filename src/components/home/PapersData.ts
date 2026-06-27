@@ -11,6 +11,10 @@ export interface Paper {
   citations: string;
   tags: { label: string; color: string }[];
   methods: string[];
+  sotaBenchmarks: string[];
+  sotaRank: string;
+  sotaRankLabel: string;
+  sotaExtra: string;
   thumbUrl: string;
 }
 
@@ -32,6 +36,10 @@ export const PAPERS: Paper[] = [
       { label: "World Knowledge", color: "orange" },
     ],
     methods: ["DeepSeek Sparse Attention", "MCP", "Mixture-of-Experts (MoE)", "Transformer"],
+    sotaBenchmarks: ["AIME 2026", "HMMT Feb 2026", "PostTrainBench"],
+    sotaRank: "3",
+    sotaRankLabel: "FrontierSWE, NL2Repo",
+    sotaExtra: "",
     thumbUrl: "/img1.png",
   },
   {
@@ -49,6 +57,10 @@ export const PAPERS: Paper[] = [
       { label: "Efficiency", color: "orange" },
     ],
     methods: ["DeepSeek Sparse Attention", "Gated DeltaNet", "Key-value cache", "Kimi Delta Attention"],
+    sotaBenchmarks: ["LongBench"],
+    sotaRank: "2",
+    sotaRankLabel: "RULER (128K)",
+    sotaExtra: "",
     thumbUrl: "/img2.png",
   },
   {
@@ -66,6 +78,10 @@ export const PAPERS: Paper[] = [
       { label: "Model Merging", color: "orange" },
     ],
     methods: ["Mamba", "Post-training", "Transformer"],
+    sotaBenchmarks: ["Natural Questions"],
+    sotaRank: "3",
+    sotaRankLabel: "CommonsenseQA",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
   {
@@ -84,6 +100,10 @@ export const PAPERS: Paper[] = [
       { label: "Video Classification", color: "orange" },
     ],
     methods: ["Qwen3", "Mixture-of-Experts (MoE)", "Post-training"],
+    sotaBenchmarks: ["C-Eval", "IFEval", "MathVista", "MMLU-Pro"],
+    sotaRank: "",
+    sotaRankLabel: "",
+    sotaExtra: "+20 more",
     thumbUrl: "/img4.png",
   },
   {
@@ -101,6 +121,10 @@ export const PAPERS: Paper[] = [
       { label: "Multimodal", color: "orange" },
     ],
     methods: ["Classifier-free guidance", "Diffusion", "Diffusion Transformer (DiT)", "Flow matching"],
+    sotaBenchmarks: ["EvalCrafter", "VBench"],
+    sotaRank: "2",
+    sotaRankLabel: "AudioCaps",
+    sotaExtra: "",
     thumbUrl: "/img1.png",
   },
   {
@@ -118,6 +142,10 @@ export const PAPERS: Paper[] = [
       { label: "Reinforcement Learning", color: "orange" },
     ],
     methods: ["Function calling", "GRPO", "Mamba", "Mixture-of-Experts (MoE)"],
+    sotaBenchmarks: ["LiveCodeBench (v5)", "RULER", "TauBench"],
+    sotaRank: "2",
+    sotaRankLabel: "WMT24++",
+    sotaExtra: "#3 on AIME 2025",
     thumbUrl: "/img2.png",
   },
   {
@@ -135,6 +163,10 @@ export const PAPERS: Paper[] = [
       { label: "Inference", color: "orange" },
     ],
     methods: ["DeepSeek-R1", "Diffusion", "Speculative decoding"],
+    sotaBenchmarks: ["HumanEval"],
+    sotaRank: "3",
+    sotaRankLabel: "Spec-Bench",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
   {
@@ -152,6 +184,10 @@ export const PAPERS: Paper[] = [
       { label: "Reinforcement Learning", color: "orange" },
     ],
     methods: ["Fine-tuning", "GRPO", "Post-training"],
+    sotaBenchmarks: ["SWE-Bench Verified"],
+    sotaRank: "2",
+    sotaRankLabel: "Terminal-Bench",
+    sotaExtra: "",
     thumbUrl: "/img4.png",
   },
   {
@@ -170,6 +206,10 @@ export const PAPERS: Paper[] = [
       { label: "Coding Agents", color: "orange" },
     ],
     methods: ["fp8", "Mixture-of-Experts (MoE)", "Multi-head attention", "Qwen3"],
+    sotaBenchmarks: ["RealWorldQA", "Video-MME"],
+    sotaRank: "2",
+    sotaRankLabel: "Claw-Eval, MMBench-V1.1",
+    sotaExtra: "+1 more",
     thumbUrl: "/img1.png",
   },
   {
@@ -187,6 +227,10 @@ export const PAPERS: Paper[] = [
       { label: "Reinforcement Learning", color: "orange" },
     ],
     methods: ["DeepSeek Sparse Attention", "Fine-tuning", "GRPO", "Post-training", "Test-time scaling"],
+    sotaBenchmarks: [],
+    sotaRank: "2",
+    sotaRankLabel: "AIME 2026",
+    sotaExtra: "#3 on IFEval",
     thumbUrl: "/img2.png",
   },
   {
@@ -204,6 +248,10 @@ export const PAPERS: Paper[] = [
       { label: "Voice Cloning", color: "orange" },
     ],
     methods: ["Diffusion Transformer (DiT)", "Direct Preference Optimization (DPO)", "Flow matching"],
+    sotaBenchmarks: ["LibriSpeech", "UTMOS"],
+    sotaRank: "2",
+    sotaRankLabel: "VoiceBench",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
   {
@@ -221,6 +269,10 @@ export const PAPERS: Paper[] = [
       { label: "Reasoning", color: "orange" },
     ],
     methods: ["Deep Research", "DeepSeek-R1", "Direct Preference Optimization (DPO)", "Fine-tuning"],
+    sotaBenchmarks: ["GAIA"],
+    sotaRank: "2",
+    sotaRankLabel: "BrowseComp-Plus",
+    sotaExtra: "",
     thumbUrl: "/img4.png",
   },
   {
@@ -238,6 +290,10 @@ export const PAPERS: Paper[] = [
       { label: "Pretraining", color: "orange" },
     ],
     methods: ["DeepSeek-R1", "Direct Preference Optimization (DPO)", "GRPO", "Key-value cache"],
+    sotaBenchmarks: ["MMLU-Pro"],
+    sotaRank: "3",
+    sotaRankLabel: "HellaSwag",
+    sotaExtra: "",
     thumbUrl: "/img1.png",
   },
   {
@@ -255,6 +311,10 @@ export const PAPERS: Paper[] = [
       { label: "Efficiency", color: "orange" },
     ],
     methods: ["Big Bird", "Flash Attention", "Gated DeltaNet", "Grouped-Query Attention"],
+    sotaBenchmarks: ["RULER"],
+    sotaRank: "2",
+    sotaRankLabel: "LongBench (1M)",
+    sotaExtra: "",
     thumbUrl: "/img2.png",
   },
   {
@@ -272,6 +332,10 @@ export const PAPERS: Paper[] = [
       { label: "Voice Cloning", color: "orange" },
     ],
     methods: ["Pre-training", "Qwen3", "Scaling Laws", "SoundStream", "Transformer", "WaveNet"],
+    sotaBenchmarks: ["UTMOS"],
+    sotaRank: "3",
+    sotaRankLabel: "LibriSpeech (WER)",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
   {
@@ -290,6 +354,10 @@ export const PAPERS: Paper[] = [
       { label: "Coding Agents", color: "orange" },
     ],
     methods: ["Mixture-of-Experts (MoE)", "Post-training", "Sparse attention", "Transformer"],
+    sotaBenchmarks: ["LiveCodeBench (v6)", "MRCR v2 (1M)"],
+    sotaRank: "2",
+    sotaRankLabel: "MMLU-Pro",
+    sotaExtra: "",
     thumbUrl: "/img4.png",
   },
   {
@@ -308,6 +376,10 @@ export const PAPERS: Paper[] = [
       { label: "Language Modeling", color: "orange" },
     ],
     methods: ["Function calling", "Mixture-of-Experts (MoE)", "Qwen3"],
+    sotaBenchmarks: ["AndroidWorld", "OSWorld"],
+    sotaRank: "2",
+    sotaRankLabel: "OSW-G (OSWorld-G)",
+    sotaExtra: "",
     thumbUrl: "/img1.png",
   },
   {
@@ -325,6 +397,10 @@ export const PAPERS: Paper[] = [
       { label: "Question Answering", color: "orange" },
     ],
     methods: ["Fine-tuning", "GRPO", "Post-training"],
+    sotaBenchmarks: ["SWE-Bench Verified"],
+    sotaRank: "3",
+    sotaRankLabel: "RepoQA",
+    sotaExtra: "",
     thumbUrl: "/img2.png",
   },
   {
@@ -342,6 +418,10 @@ export const PAPERS: Paper[] = [
       { label: "Reasoning", color: "orange" },
     ],
     methods: ["Chain-of-Thought (CoT)", "Test-time scaling"],
+    sotaBenchmarks: ["MathArena"],
+    sotaRank: "2",
+    sotaRankLabel: "AIME 2026",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
   {
@@ -359,6 +439,10 @@ export const PAPERS: Paper[] = [
       { label: "Reinforcement Learning", color: "orange" },
     ],
     methods: ["Chain-of-Thought (CoT)", "Diffusion Transformer (DiT)", "LoRa", "Reward model"],
+    sotaBenchmarks: ["MusicCaps"],
+    sotaRank: "2",
+    sotaRankLabel: "Song Describer Dataset",
+    sotaExtra: "",
     thumbUrl: "/img4.png",
   },
   {
@@ -376,6 +460,10 @@ export const PAPERS: Paper[] = [
       { label: "Data Curation", color: "orange" },
     ],
     methods: ["Pre-training", "T5"],
+    sotaBenchmarks: ["mC4"],
+    sotaRank: "3",
+    sotaRankLabel: "Arabic NLP Benchmark",
+    sotaExtra: "",
     thumbUrl: "/img1.png",
   },
   {
@@ -393,6 +481,10 @@ export const PAPERS: Paper[] = [
       { label: "Reasoning", color: "orange" },
     ],
     methods: ["Pre-training", "Reasoning model", "RoPE", "Transformer"],
+    sotaBenchmarks: ["ARC-Challenge"],
+    sotaRank: "3",
+    sotaRankLabel: "BabyLM Benchmark",
+    sotaExtra: "",
     thumbUrl: "/img2.png",
   },
   {
@@ -410,6 +502,10 @@ export const PAPERS: Paper[] = [
       { label: "World Models", color: "orange" },
     ],
     methods: ["Diffusion Transformer (DiT)", "Flow matching", "Transformer"],
+    sotaBenchmarks: ["TAPVid-3D"],
+    sotaRank: "2",
+    sotaRankLabel: "DynPoint Benchmark",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
   {
@@ -427,6 +523,10 @@ export const PAPERS: Paper[] = [
       { label: "Reinforcement Learning", color: "orange" },
     ],
     methods: ["Chain-of-Thought (CoT)", "Fine-tuning", "Post-training", "Qwen3"],
+    sotaBenchmarks: ["MATH-500"],
+    sotaRank: "3",
+    sotaRankLabel: "GSM8K",
+    sotaExtra: "",
     thumbUrl: "/img4.png",
   },
   {
@@ -446,6 +546,10 @@ export const PAPERS: Paper[] = [
       { label: "Language Modeling", color: "orange" },
     ],
     methods: ["Long Context", "Omni Models", "Post-training", "RMSNorm", "Function calling"],
+    sotaBenchmarks: ["MMMU", "MathVista"],
+    sotaRank: "2",
+    sotaRankLabel: "LiveCodeBench (v5)",
+    sotaExtra: "",
     thumbUrl: "/img1.png",
   },
   {
@@ -463,6 +567,10 @@ export const PAPERS: Paper[] = [
       { label: "Multimodal", color: "orange" },
     ],
     methods: ["Autoencoder (AE)", "Diffusion", "Inpainting", "Post-training"],
+    sotaBenchmarks: ["MusicCaps", "AudioCaps"],
+    sotaRank: "2",
+    sotaRankLabel: "FAD (AudioSet)",
+    sotaExtra: "",
     thumbUrl: "/img2.png",
   },
   {
@@ -480,6 +588,10 @@ export const PAPERS: Paper[] = [
       { label: "Object Detection", color: "orange" },
     ],
     methods: ["ColPaLi", "Deformable Attention", "DETR", "Faster R-CNN"],
+    sotaBenchmarks: ["RefCOCO", "RefCOCO+"],
+    sotaRank: "2",
+    sotaRankLabel: "Flickr30k Entities",
+    sotaExtra: "",
     thumbUrl: "/img3.png",
   },
 ];

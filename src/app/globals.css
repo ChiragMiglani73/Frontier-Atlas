@@ -6,9 +6,10 @@
 
 :root {
   --color-brand-red: #E8442A;
-  --color-brand-orange: #F97316;
+  --color-brand-orange: #D94F1E;
+  --color-brand-orange-hover: #C0451A;
 
-  --color-bg: #FAF0EA;
+  --color-bg: #EDEAE3;
   --color-surface: #ffffff;
   --color-surface-hover: #f5ede6;
   --color-border: #e8ddd6;
@@ -17,7 +18,7 @@
   --color-text-primary: #111111;
   --color-text-secondary: #555555;
   --color-text-muted: #888888;
-  --color-text-link: #E8442A;
+  --color-text-link: #D94F1E;
 
   --sidebar-width: 220px;
   --topbar-height: 52px;
@@ -44,6 +45,52 @@ html, body {
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+
+/* ── Button Utilities ─────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #D94F1E;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #C0451A;
+}
+
+.btn-primary:active {
+  background-color: #A83C16;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #D94F1E;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #D94F1E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(217, 79, 30, 0.08);
+}
 
 .tag-chip {
   display: inline-flex;
@@ -78,7 +125,7 @@ html, body {
 }
 
 .nav-active {
-  color: var(--color-brand-orange);
+  color: #D94F1E;
   font-weight: 600;
 }
 
@@ -115,4 +162,3 @@ html, body {
 }
 
 .z-45 { z-index: 45; }
-.duration-250 { transition-duration: 250ms; }

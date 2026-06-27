@@ -7,7 +7,7 @@ import Link from "next/link";
 const TABS = ["Today", "This Week", "This Month", "All time"];
 
 const TAG_COLORS: Record<string, { bg: string; text: string }> = {
-  orange: { bg: "bg-[#FFF0E8]", text: "text-[#E85D2B]" },
+  orange: { bg: "bg-[#FFF0E8]", text: "text-[#D94F1E]" },
 };
 
 // ─── Hero Cards ──────────────────────────────────────────────
@@ -15,52 +15,52 @@ const TAG_COLORS: Record<string, { bg: string; text: string }> = {
 function BreakthroughCard() {
   return (
     <div
-      className="rounded-xl p-4 lg:p-5 text-white flex flex-col relative overflow-hidden h-full"
+      className="rounded-xl p-4 sm:p-5 text-white flex flex-col relative overflow-hidden h-full border border-[#333333]"
       style={{
         background:
           "radial-gradient(ellipse at 80% 40%, rgba(234,88,12,0.5) 0%, transparent 60%), linear-gradient(135deg, #1a1a1a 0%, #111111 100%)",
       }}
     >
-      <div className="flex items-center gap-2 mb-3 flex-wrap">
+      <div className="flex items-center gap-2 mb-2 sm:mb-3 flex-wrap">
         <span className="text-sm flex-shrink-0">🔥</span>
-        <span className="text-[11px] font-semibold tracking-wider uppercase text-[#F97316] whitespace-nowrap">
+        <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-[#D94F1E] whitespace-nowrap">
           BREAKTHROUGH TODAY
         </span>
         <span
-          className="text-[11px] text-white font-semibold ml-auto flex-shrink-0 px-2.5 lg:px-3 py-1 rounded-full"
-          style={{ background: "linear-gradient(135deg, #f97316, #ea580c)" }}
+          className="text-[10px] sm:text-[11px] text-white font-semibold ml-auto flex-shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full"
+          style={{ background: "linear-gradient(135deg, #D94F1E, #C0451A)" }}
         >
           Official Release
         </span>
       </div>
 
-      <div className="flex items-start justify-between gap-3 mb-2">
-        <h2 className="text-[16px] lg:text-[18px] font-bold leading-snug">
-          <span className="whitespace-nowrap">OpenAI releases</span>{' '}
+      <div className="flex items-start justify-between gap-2 sm:gap-3 mb-2">
+        <h2 className="text-[13px] sm:text-[15px] font-bold leading-snug">
+          <span className="whitespace-nowrap">OpenAI releases</span>{" "}
           <span className="whitespace-nowrap">GPT-4.5 Turbo</span>
         </h2>
         <div
-          className="flex-shrink-0 w-[44px] h-[44px] lg:w-[52px] lg:h-[52px] rounded-xl flex items-center justify-center"
-          style={{ background: "linear-gradient(135deg, #f97316, #ea580c)" }}
+          className="flex-shrink-0 w-8 h-8 sm:w-[40px] sm:h-[40px] rounded-xl flex items-center justify-center"
+          style={{ background: "linear-gradient(135deg, #D94F1E, #C0451A)" }}
         >
-          <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 lg:w-7 lg:h-7">
+          <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5">
             <path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835 9.964 9.964 0 0 0-6.505-3.438 10.079 10.079 0 0 0-10.47 4.985 9.964 9.964 0 0 0-6.664 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 6.504 3.438 10.079 10.079 0 0 0 10.472-4.985 9.966 9.966 0 0 0 6.664-4.834 10.079 10.079 0 0 0-1.241-11.817zm-15.115 21.168a7.474 7.474 0 0 1-4.797-1.735c.061-.033.168-.091.237-.134l7.964-4.6a1.294 1.294 0 0 0 .655-1.134V19.054l3.366 1.944a.12.12 0 0 1 .066.092v9.299a7.505 7.505 0 0 1-7.49 7.649zm-16.116-6.867a7.471 7.471 0 0 1-.894-5.023c.06.036.162.099.237.141l7.964 4.6a1.297 1.297 0 0 0 1.308 0l9.724-5.614v3.888a.12.12 0 0 1-.048.103l-8.051 4.649a7.504 7.504 0 0 1-10.24-2.744zm-2.09-17.41a7.47 7.47 0 0 1 3.897-3.286C7.11 10.76 7.099 10.87 7.099 10.99v9.199a1.294 1.294 0 0 0 .654 1.132l9.723 5.614-3.366 1.944a.12.12 0 0 1-.114.012L5.945 23.93a7.504 7.504 0 0 1-1.734-10.168zm27.658 6.437l-9.724-5.615 3.367-1.943a.121.121 0 0 1 .114-.012l8.048 4.648a7.498 7.498 0 0 1-1.158 13.528v-9.476a1.293 1.293 0 0 0-.647-1.13zm3.35-5.043c-.059-.037-.162-.099-.236-.141l-7.965-4.6a1.298 1.298 0 0 0-1.308 0l-9.723 5.614v-3.888a.12.12 0 0 1 .048-.103l8.05-4.645a7.497 7.497 0 0 1 11.135 7.763zm-21.063 6.929l-3.367-1.944a.12.12 0 0 1-.065-.092v-9.299a7.497 7.497 0 0 1 12.293-5.756 6.94 6.94 0 0 0-.236.134l-7.965 4.6a1.294 1.294 0 0 0-.654 1.132l-.006 11.225zm1.829-3.943l4.33-2.501 4.332 2.5v4.999l-4.331 2.5-4.331-2.5V18.14z" fill="white"/>
           </svg>
         </div>
       </div>
 
-      <p className="text-[11px] lg:text-[12px] text-[#888888] mb-2.5 leading-relaxed">
+      <p className="text-[11px] sm:text-[12px] text-[#888888] mb-2 sm:mb-2.5 leading-relaxed">
         First-party model in the GPT-4.5 series, now available in OpenAI Studio.
       </p>
 
-      <div className="space-y-1 mb-3">
+      <div className="space-y-1 sm:space-y-1.5 mb-2 sm:mb-3">
         {[
-          "Beats Gemini 1.5 Pro on 7 benchmarks",
+          "Beats Gemini 1.5 Pro on 7 benc...",
           "256K context length",
           "Lower latency, higher accuracy",
         ].map((point) => (
-          <div key={point} className="flex items-center gap-2 text-[11px] lg:text-[12px] text-[#888888]">
-            <svg viewBox="0 0 16 16" className="w-3 h-3 flex-shrink-0 text-[#F97316]" fill="currentColor">
+          <div key={point} className="flex items-center gap-2 text-[11px] sm:text-[12px] text-[#888888]">
+            <svg viewBox="0 0 16 16" className="w-3 h-3 flex-shrink-0 text-[#D94F1E]" fill="currentColor">
               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
             </svg>
             <span className="truncate">{point}</span>
@@ -68,7 +68,7 @@ function BreakthroughCard() {
         ))}
       </div>
 
-      <a href="#" className="text-[11px] lg:text-[12px] font-semibold flex items-center gap-1 hover:underline mt-auto text-[#F97316]">
+      <a href="#" className="text-[11px] sm:text-[12px] font-semibold flex items-center gap-1 hover:underline mt-auto text-[#D94F1E]">
         View paper →
       </a>
     </div>
@@ -82,28 +82,37 @@ function RisingFastCard() {
     { rank: 3, name: "LongRPE 2.0", stars: "+398" },
   ];
   return (
-    <div className="rounded-xl p-4 lg:p-5 flex flex-col h-full bg-white border border-[#e5e5e5]">
-      <div className="flex items-center gap-2 mb-5">
-        <svg viewBox="0 0 16 16" className="w-10 h-10 text-[#F97316] flex-shrink-0" fill="currentColor">
+    <div className="rounded-xl p-4 sm:p-5 flex flex-col h-full bg-[#EDEAE3] border border-gray-300">
+      <div className="flex items-center gap-2 mb-3 sm:mb-4">
+        <svg viewBox="0 0 16 16" className="w-4 h-4 sm:w-5 sm:h-5 text-[#D94F1E] flex-shrink-0" fill="currentColor">
           <path d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
         </svg>
-        <span className="text-[11px] font-semibold tracking-wider uppercase text-[#555555]">RISING FAST</span>
+        <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-gray-500">RISING FAST</span>
       </div>
-      <div className="mb-5">
-        <span className="text-4xl lg:text-5xl font-bold text-[#111111]">+540</span>
-        <p className="text-sm text-[#888888] mt-1.5">GitHub stars<br />in the last 8 hours</p>
+
+      <div className="mb-3 sm:mb-4">
+        <span className="text-3xl sm:text-5xl font-bold text-[#D94F1E]">+540</span>
+        <p className="text-xs sm:text-sm text-gray-500 mt-1 leading-relaxed">
+          GitHub stars<br />in the last 8 hours
+        </p>
       </div>
-      <div className="space-y-4 flex-1">
+
+      <div className="space-y-2 sm:space-y-3 flex-1">
         {items.map((item) => (
-          <div key={item.rank} className="flex items-center gap-3">
-            <span className="text-sm text-[#888888] w-4 flex-shrink-0">{item.rank}</span>
-            <span className="text-sm text-[#555555] flex-1 min-w-0 truncate">{item.name}</span>
-            <span className="text-sm font-semibold text-[#111111] flex-shrink-0">{item.stars}</span>
-            <span className="text-[#F97316] text-base flex-shrink-0">★</span>
+          <div key={item.rank} className="flex items-center gap-2 sm:gap-3">
+            <span className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#FFF0E8] text-[#D94F1E] text-[10px] sm:text-xs font-bold flex-shrink-0">
+              {item.rank}
+            </span>
+            <span className="text-xs sm:text-sm font-semibold text-gray-900 flex-1 min-w-0 truncate">{item.name}</span>
+            <span className="text-xs sm:text-sm font-semibold text-gray-900 flex-shrink-0">{item.stars}</span>
+            <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D94F1E] flex-shrink-0" fill="currentColor">
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
           </div>
         ))}
       </div>
-      <a href="#" className="text-sm font-medium mt-5 flex items-center gap-1 hover:underline text-[#F97316]">
+
+      <a href="#" className="text-xs sm:text-sm font-medium mt-auto pt-2 sm:pt-3 flex items-center gap-1 hover:underline text-[#D94F1E]">
         View all rising →
       </a>
     </div>
@@ -118,22 +127,30 @@ function NewSotaCard() {
     { label: "MuJoCo World Model Suite", badges: "#1 on 3 benchmarks" },
   ];
   return (
-    <div className="rounded-xl p-4 lg:p-5 flex flex-col h-full bg-white border border-[#e5e5e5]">
-      <div className="flex items-center justify-between mb-5">
+    <div className="rounded-xl p-4 sm:p-5 flex flex-col h-full bg-[#EDEAE3] border border-[#e0ddd6]">
+      <div className="flex items-center justify-between mb-3 sm:mb-5">
         <div className="flex items-center gap-2">
-          <span className="text-base">🏆</span>
-          <span className="text-[11px] font-semibold tracking-wider uppercase text-[#555555]">NEW SOTA TODAY</span>
+          <span className="text-sm sm:text-base">🏆</span>
+          <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-[#555555]">NEW SOTA TODAY</span>
         </div>
-        <a href="#" className="text-sm font-medium flex items-center gap-1 hover:underline flex-shrink-0 text-[#F97316]">
+        <a href="#" className="text-[11px] sm:text-[12px] font-medium flex items-center gap-1 hover:underline flex-shrink-0 text-[#D94F1E]">
           View all →
         </a>
       </div>
-      <div className="space-y-0 flex-1 flex flex-col justify-between">
+      <div className="space-y-3 sm:space-y-4 flex-1 flex flex-col">
         {items.map((item, i) => (
-          <div key={i} className="flex items-center gap-3 py-3 border-b border-[#f5f5f5] last:border-b-0">
-            <span className="inline-flex items-center text-[11px] bg-[#ffedd5] text-[#9a3412] px-2 py-1 rounded font-semibold shrink-0">SOTA</span>
-            <span className="text-sm text-[#555555] flex-1 min-w-0 truncate" title={item.label}>{item.label}</span>
-            <span className="text-sm text-[#888888] shrink-0 text-right hidden sm:inline whitespace-nowrap">{item.badges}</span>
+          <div key={i} className="flex items-start gap-2 sm:gap-3">
+            <span className="inline-flex items-center text-[10px] sm:text-[11px] bg-[#FFF0E8] text-[#D94F1E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-semibold shrink-0 mt-0.5">
+              SOTA
+            </span>
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <span className="text-[11px] sm:text-[13px] font-semibold text-[#111111] truncate" title={item.label}>
+                {item.label}
+              </span>
+              <span className="text-[11px] sm:text-[12px] text-[#888888]">
+                {item.badges}
+              </span>
+            </div>
           </div>
         ))}
       </div>
@@ -150,28 +167,28 @@ function TrendingGithubCard() {
     { name: "unslohai/unsloh", stars: "+1.2k" },
   ];
   return (
-    <div className="rounded-xl p-4 lg:p-5 flex flex-col bg-white border border-[#e5e5e5]">
-      <div className="flex items-center gap-3 mb-4">
-        <svg viewBox="0 0 16 16" className="w-5 h-5 text-[#111111] flex-shrink-0" fill="currentColor">
+    <div className="rounded-xl p-4 sm:p-5 flex flex-col h-full bg-[#EDEAE3] border border-[#e0ddd6]">
+      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+        <svg viewBox="0 0 16 16" className="w-4 h-4 sm:w-5 sm:h-5 text-[#111111] flex-shrink-0" fill="currentColor">
           <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
         </svg>
-        <span className="text-[11px] font-bold tracking-wider uppercase text-[#111111]">TRENDING ON GITHUB</span>
+        <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-[#111111]">TRENDING ON GITHUB</span>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3 flex-1">
         {items.map((item, i) => (
           <div key={i} className="flex items-center gap-2">
-            <svg viewBox="0 0 16 16" className="w-4 h-4 text-[#111111] flex-shrink-0" fill="currentColor">
+            <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#111111] flex-shrink-0" fill="currentColor">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
-            <span className="text-[13px] text-[#555555] flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
-            <span className="text-[13px] text-[#888888] font-medium flex-shrink-0">{item.stars}</span>
-            <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 text-[#111111] flex-shrink-0" fill="currentColor">
+            <span className="text-[11px] sm:text-[13px] text-[#555555] flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
+            <span className="text-[11px] sm:text-[13px] text-[#888888] font-medium flex-shrink-0">{item.stars}</span>
+            <svg viewBox="0 0 16 16" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#111111] flex-shrink-0" fill="currentColor">
               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
             </svg>
           </div>
         ))}
       </div>
-      <a href="#" className="text-[13px] text-[#888888] font-medium mt-4 pt-2 flex items-center gap-1.5 hover:text-[#111111] transition-colors">
+      <a href="#" className="text-[11px] sm:text-[13px] text-[#888888] font-medium mt-auto pt-2 flex items-center gap-1.5 hover:text-[#D94F1E] transition-colors">
         View all trending repos →
       </a>
     </div>
@@ -194,24 +211,24 @@ function TrendingXCard() {
   );
 
   return (
-    <div className="bg-[#111827] rounded-xl p-4 lg:p-5 text-white flex flex-col">
-      <div className="flex items-center gap-3 mb-4">
-        <XIcon className="w-5 h-5 text-white flex-shrink-0" />
-        <span className="text-[11px] font-bold tracking-wider uppercase text-white">TRENDING ON X</span>
+    <div className="bg-[#111827] rounded-xl p-3 sm:p-4 text-white flex flex-col border border-[#1a2234]">
+      <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+        <XIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+        <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-white">TRENDING ON X</span>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {items.map((item, i) => (
           <div key={i} className="flex items-center gap-2">
-            <XIcon className="w-4 h-4 text-[#888888] flex-shrink-0" />
-            <span className="text-[13px] text-[#d1d5db] flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
-            <span className="text-[13px] text-[#9ca3af] font-medium flex-shrink-0">{item.stars}</span>
-            <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 text-[#4b5563] flex-shrink-0" fill="currentColor">
+            <XIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#888888] flex-shrink-0" />
+            <span className="text-[11px] sm:text-[13px] text-[#d1d5db] flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
+            <span className="text-[11px] sm:text-[13px] text-[#9ca3af] font-medium flex-shrink-0">{item.stars}</span>
+            <svg viewBox="0 0 16 16" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#4b5563] flex-shrink-0" fill="currentColor">
               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
             </svg>
           </div>
         ))}
       </div>
-      <a href="#" className="text-[13px] text-[#9ca3af] font-medium mt-4 pt-2 flex items-center gap-1.5 hover:text-white transition-colors">
+      <a href="#" className="text-[11px] sm:text-[13px] text-[#9ca3af] font-medium mt-3 sm:mt-4 pt-2 flex items-center gap-1.5 hover:text-[#D94F1E] transition-colors">
         View all trending posts →
       </a>
     </div>
@@ -235,70 +252,33 @@ function TrendingRedditCard() {
 
   return (
     <div
-      className="rounded-xl p-4 lg:p-5 text-white flex flex-col relative overflow-hidden"
+      className="rounded-xl p-3 sm:p-4 text-white flex flex-col relative overflow-hidden border border-[#3a2a20]"
       style={{
         background:
           "radial-gradient(ellipse at 20% 20%, rgba(234,88,12,0.55) 0%, transparent 60%), linear-gradient(145deg, #1e1208 0%, #111111 100%)",
       }}
     >
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-8 h-8 rounded-full bg-[#F97316] flex items-center justify-center flex-shrink-0">
-          <RedditIcon className="w-5 h-5 text-white" />
+      <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#D94F1E] flex items-center justify-center flex-shrink-0">
+          <RedditIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
         </div>
-        <span className="text-[11px] font-bold tracking-wider uppercase text-white">TRENDING ON REDDIT</span>
+        <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-white">TRENDING ON REDDIT</span>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {items.map((item, i) => (
           <div key={i} className="flex items-center gap-2">
-            <RedditIcon className="w-4 h-4 text-white/40 flex-shrink-0" />
-            <span className="text-[13px] text-white/90 flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
-            <span className="text-[13px] text-white/70 font-medium flex-shrink-0">{item.stars}</span>
-            <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 text-white/50 flex-shrink-0" fill="currentColor">
+            <RedditIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white/40 flex-shrink-0" />
+            <span className="text-[11px] sm:text-[13px] text-white/90 flex-1 min-w-0 truncate" title={item.name}>{item.name}</span>
+            <span className="text-[11px] sm:text-[13px] text-white/70 font-medium flex-shrink-0">{item.stars}</span>
+            <svg viewBox="0 0 16 16" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/50 flex-shrink-0" fill="currentColor">
               <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
             </svg>
           </div>
         ))}
       </div>
-      <a href="#" className="text-[13px] text-white/70 font-medium mt-4 pt-2 flex items-center gap-1.5 hover:text-white transition-colors">
+      <a href="#" className="text-[11px] sm:text-[13px] text-white/70 font-medium mt-3 sm:mt-4 pt-2 flex items-center gap-1.5 hover:text-[#D94F1E] transition-colors">
         View all trending discussions →
       </a>
-    </div>
-  );
-}
-
-// ─── Hero Section ────────────────────────────────────────────
-
-function HeroSection({ active, setActive }: { active: string; setActive: (t: string) => void }) {
-  return (
-    <div className="mb-6 pt-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 mb-6 items-stretch">
-        <div className="md:col-span-2 lg:col-span-1">
-          <BreakthroughCard />
-        </div>
-        <div>
-          <RisingFastCard />
-        </div>
-        <div>
-          <NewSotaCard />
-        </div>
-      </div>
-
-      <div className="flex items-center gap-0 border-b border-[#e5e5e5] overflow-x-auto">
-        {TABS.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActive(tab)}
-            className={`pb-2.5 px-3 lg:px-4 text-sm font-medium transition-colors relative whitespace-nowrap flex-shrink-0 ${
-              active === tab ? "text-[#F97316] font-semibold" : "text-[#888888] hover:text-[#555555]"
-            }`}
-          >
-            {tab}
-            {active === tab && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#F97316] rounded-t-full" />
-            )}
-          </button>
-        ))}
-      </div>
     </div>
   );
 }
@@ -312,12 +292,12 @@ function PaperThumbnail({ thumbUrl, href }: { thumbUrl: string; href: string }) 
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Open paper"
-      className="w-full md:w-[150px] lg:w-[180px] md:min-w-[150px] lg:min-w-[180px] self-stretch rounded-lg overflow-hidden flex-shrink-0 shadow-sm order-1 md:order-none group bg-[#f9f9f9] border border-[#e5e5e5]"
+      className="w-full max-h-[180px] sm:max-h-[220px] md:max-h-none md:w-[180px] lg:w-[200px] md:min-w-[150px] lg:min-w-[180px] self-stretch rounded-lg overflow-hidden flex-shrink-0 shadow-sm order-1 md:order-none group bg-[#f9f9f9] border border-[#e0ddd6] transition-colors hover:border-[#D94F1E] flex items-center justify-center"
     >
       <img
         src={thumbUrl}
         alt="Paper thumbnail"
-        className="w-full h-full object-cover min-h-[120px] md:min-h-0 transition-transform duration-300 ease-out group-hover:scale-[1.05]"
+        className="w-full h-auto md:h-full object-contain md:object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
         loading="lazy"
         onError={(e) => {
           const t = e.target as HTMLImageElement;
@@ -336,7 +316,7 @@ function Tag({ label, color }: { label: string; color: string }) {
   return (
     <a
       href="#"
-      className={`inline-flex items-center h-[25px] text-[11px] lg:text-[12px] font-medium px-2 lg:px-2.5 rounded whitespace-nowrap transition-opacity hover:opacity-80 ${c.bg} ${c.text}`}
+      className={`inline-flex items-center h-[22px] sm:h-[25px] text-[10px] sm:text-[11px] lg:text-[12px] font-medium px-1.5 sm:px-2 lg:px-2.5 rounded whitespace-nowrap transition-opacity hover:opacity-80 ${c.bg} ${c.text}`}
     >
       {label}
     </a>
@@ -347,12 +327,14 @@ function MethodChip({ label }: { label: string }) {
   return (
     <a
       href="#"
-      className="inline-flex items-center h-[25px] text-[11px] lg:text-[12px] text-[#555555] bg-[#F5F5F5] border border-[#e5e5e5] px-2 lg:px-2.5 rounded whitespace-nowrap transition-opacity hover:opacity-80"
+      className="inline-flex items-center h-[22px] sm:h-[25px] text-[10px] sm:text-[11px] lg:text-[12px] text-[#555555] bg-[#F5F5F5] border border-[#e5e5e5] px-1.5 sm:px-2 lg:px-2.5 rounded whitespace-nowrap transition-all hover:opacity-80 hover:border-[#D94F1E] hover:text-[#D94F1E]"
     >
       {label}
     </a>
   );
 }
+
+// ─── SOTA Row (merged from first file) ───────────────────────
 
 function SotaRow({
   benchmarks,
@@ -369,31 +351,31 @@ function SotaRow({
   return (
     <div className="flex items-center flex-wrap gap-x-1.5 gap-y-1">
       {benchmarks.length > 0 && (
-        <span className="inline-flex items-center gap-1 text-[11px] font-medium py-[2px] px-2 rounded bg-[#fffbeb] text-[#92400e] whitespace-nowrap">
+        <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-medium py-[2px] px-1.5 sm:px-2 rounded bg-[#FFF0E8] text-[#92400e] whitespace-nowrap">
           🏆 SOTA on
         </span>
       )}
       {benchmarks.map((b, i) => (
-        <a key={b} href="#" className="text-[11px] font-medium text-[#2563eb] no-underline whitespace-nowrap hover:underline">
+        <a key={b} href="#" className="text-[10px] sm:text-[11px] font-medium text-[#D94F1E] no-underline whitespace-nowrap hover:underline">
           {b}{i < benchmarks.length - 1 ? "," : ""}
         </a>
       ))}
       {rank && (
         <>
           {benchmarks.length > 0 && <span className="text-[#f0f0f0] text-xs mx-px">·</span>}
-          <span className="inline-flex items-center gap-[3px] text-[11px] font-medium py-[2px] px-2 rounded bg-[#ecfdf5] text-[#065f46] whitespace-nowrap">
-            <svg viewBox="0 0 16 16" fill="#10b981" className="w-2.5 h-2.5">
+          <span className="inline-flex items-center gap-[3px] text-[10px] sm:text-[11px] font-medium py-[2px] px-1.5 sm:px-2 rounded bg-[#FFF0E8] text-[#D94F1E] whitespace-nowrap">
+            <svg viewBox="0 0 16 16" fill="#D94F1E" className="w-2.5 h-2.5">
               <path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
             </svg>
             #{rank} on
           </span>
-          <a href="#" className="text-[11px] font-medium text-[#2563eb] no-underline whitespace-nowrap hover:underline">
+          <a href="#" className="text-[10px] sm:text-[11px] font-medium text-[#D94F1E] no-underline whitespace-nowrap hover:underline">
             {rankLabel}
           </a>
         </>
       )}
       {extra && (
-        <a href="#" className="text-[11px] text-[#888888] no-underline whitespace-nowrap hover:underline">
+        <a href="#" className="text-[10px] sm:text-[11px] text-[#888888] no-underline whitespace-nowrap hover:underline hover:text-[#D94F1E]">
           {extra}
         </a>
       )}
@@ -409,13 +391,13 @@ function BookmarkButton() {
     <button
       onClick={() => setSaved((s) => !s)}
       aria-label={saved ? "Remove bookmark" : "Bookmark paper"}
-      className="flex items-center justify-center w-7 h-7 rounded-md transition-colors hover:bg-[#f5f5f5] text-[#c0c0c0] hover:text-[#888888]"
+      className="flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-md transition-colors hover:bg-[#fff1ee] text-[#c0c0c0] hover:text-[#D94F1E]"
     >
       <svg
         viewBox="0 0 16 16"
-        className="w-4 h-4"
-        fill={saved ? "#E8442A" : "none"}
-        stroke={saved ? "#E8442A" : "currentColor"}
+        className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+        fill={saved ? "#D94F1E" : "none"}
+        stroke={saved ? "#D94F1E" : "currentColor"}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -442,13 +424,13 @@ function StatItem({
   return (
     <a
       href="#"
-      className="flex flex-col items-end gap-0.5 w-full py-4 border-b border-[#f0f0f0] last:border-b-0 transition-opacity hover:opacity-80"
+      className="flex flex-col items-end gap-0.5 w-full py-2 sm:py-4 border-b border-[#f0f0f0] last:border-b-0 transition-all hover:opacity-80 hover:text-[#D94F1E]"
     >
-      <div className={`flex items-center gap-1.5 ${accent ? "text-[#E8442A]" : "text-[#111111]"}`}>
+      <div className={`flex items-center gap-1 sm:gap-1.5 ${accent ? "text-[#D94F1E]" : "text-[#111111]"}`}>
         {icon}
-        <span className="font-semibold text-[14px] lg:text-[15px] leading-none">{value}</span>
+        <span className="font-semibold text-[13px] sm:text-[14px] lg:text-[15px] leading-none">{value}</span>
       </div>
-      <span className="text-[11px] text-[#888888] leading-none">{label}</span>
+      <span className="text-[10px] sm:text-[11px] text-[#888888] leading-none">{label}</span>
     </a>
   );
 }
@@ -457,21 +439,29 @@ function PaperCard(p: Paper) {
   const paperUrl = (p as any).arxivUrl ?? "#";
 
   return (
-    <div className="bg-white border border-[#f0f0f0] rounded-xl p-4 md:p-5 lg:p-7 flex flex-col md:flex-row gap-4 md:gap-5 lg:gap-6 items-stretch transition-shadow duration-150 hover:shadow-md hover:shadow-gray-100/50">
+    <div className="bg-[#EDEAE3] border border-[#e0ddd6] rounded-xl p-3 sm:p-4 md:p-5 lg:p-7 flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-6 items-stretch transition-shadow duration-150 hover:shadow-md hover:shadow-gray-100/50">
       <PaperThumbnail thumbUrl={p.thumbUrl} href={paperUrl} />
 
       <div className="flex-1 min-w-0 order-2 md:order-1 flex flex-col">
         <div>
           <Link href={paperUrl} target="_blank" rel="noopener noreferrer" className="group inline-block">
-            <h3 className="font-semibold text-[16px] md:text-[18px] lg:text-[21px] text-[#111111] leading-snug mb-1.5 transition-colors group-hover:text-[#E8442A]">
+            <h3 
+              className="font-semibold text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] text-[#111111] leading-snug mb-1 sm:mb-1.5 transition-colors group-hover:text-[#D94F1E] line-clamp-2"
+              style={{
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+              }}
+            >
               {p.title}
             </h3>
           </Link>
-          <p className="text-[12px] lg:text-[13px] text-[#888888] mb-2.5">
+          <p className="text-[11px] sm:text-[12px] lg:text-[13px] text-[#888888] mb-2 sm:mb-2.5">
             {p.showAuthors ? `${p.authors} · ${p.date}` : p.date}
           </p>
           <p
-            className="text-[13px] lg:text-[14px] text-[#555555] leading-relaxed line-clamp-3"
+            className="text-[12px] sm:text-[13px] lg:text-[14px] text-[#555555] leading-relaxed line-clamp-3"
             style={{
               display: "-webkit-box",
               WebkitLineClamp: 3,
@@ -483,14 +473,20 @@ function PaperCard(p: Paper) {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 mt-4">
+        <div className="flex flex-col gap-1.5 sm:gap-2 mt-3 sm:mt-4">
+          <SotaRow
+            benchmarks={p.sotaBenchmarks}
+            rank={p.sotaRank}
+            rankLabel={p.sotaRankLabel}
+            extra={p.sotaExtra}
+          />
           {p.tags.length > 0 && (
-            <div className="flex gap-1.5 flex-wrap">
+            <div className="flex gap-1 sm:gap-1.5 flex-wrap">
               {p.tags.map((t) => <Tag key={t.label} label={t.label} color={t.color} />)}
             </div>
           )}
           {p.methods.length > 0 && (
-            <div className="flex gap-1.5 flex-wrap">
+            <div className="flex gap-1 sm:gap-1.5 flex-wrap">
               {p.methods.map((m) => <MethodChip key={m} label={m} />)}
             </div>
           )}
@@ -498,40 +494,51 @@ function PaperCard(p: Paper) {
       </div>
 
       {/* ── Desktop stat column ── */}
-      <div className="hidden md:flex flex-shrink-0 items-start order-3 w-[90px]">
-        <div className="flex flex-col items-stretch w-full border-l border-[#f0f0f0] pl-4 lg:pl-5">
-          {/* Bookmark sits flush top-right */}
+      <div className="hidden md:flex flex-shrink-0 items-start order-3 w-[80px] sm:w-[90px]">
+        <div className="flex flex-col items-stretch w-full border-l border-gray-300 pl-3 sm:pl-4 lg:pl-5">
           <div className="flex justify-end mb-1">
             <BookmarkButton />
           </div>
 
           <StatItem
-            icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5"><path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" /></svg>}
-            value={p.upvotes} label="Upvotes" accent
+            icon={
+              <svg viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+                <path d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+              </svg>
+            }
+            value={p.upvotes}
+            label="Upvotes"
+            accent
           />
           <StatItem
-            icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>}
+            icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#888888]"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>}
             value={p.repos} label="Repo"
           />
           <StatItem
-            icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>}
+            icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>}
             value={p.citations} label="Citations"
           />
         </div>
       </div>
 
       {/* ── Mobile stat row ── */}
-      <div className="flex md:hidden flex-row items-stretch justify-start gap-4 sm:gap-6 order-3 pt-2 border-t border-[#f0f0f0]">
+      <div className="flex md:hidden flex-row items-stretch justify-start gap-3 sm:gap-4 order-3 pt-2 border-t border-[#f0f0f0]">
         <StatItem
-          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5"><path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" /></svg>}
-          value={p.upvotes} label="Upvotes" accent
+          icon={
+            <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5">
+              <path d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+          }
+          value={p.upvotes}
+          label="Upvotes"
+          accent
         />
         <StatItem
-          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>}
+          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#888888]"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>}
           value={p.repos} label="Repo"
         />
         <StatItem
-          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>}
+          icon={<svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#888888]"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12z" /></svg>}
           value={p.citations} label="Citations"
         />
         <div className="ml-auto flex items-center">
@@ -548,24 +555,54 @@ export default function ResearchHomePage() {
   const [activeTab, setActiveTab] = useState("Today");
 
   return (
-    <div className="min-h-screen bg-white font-[Inter]">
-      <div className="max-w-[1320px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 pb-8 lg:pb-12">
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+    <div className="min-h-screen font-[Inter]">
+      <div className="max-w-[1320px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 pb-6 sm:pb-8 lg:pb-12">
 
-          {/* Main content */}
+        {/* Hero row - explicit breakpoints: 1 col mobile, 2 cols sm/md, 4 cols lg+ */}
+        <div className="pt-4 sm:pt-6">
+          <div 
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-4 sm:mb-6"
+          >
+            <BreakthroughCard />
+            <RisingFastCard />
+            <NewSotaCard />
+            <TrendingGithubCard />
+          </div>
+
+          {/* Tabs - also full width */}
+          <div className="flex items-center gap-0 border-b border-[#e5e5e5] overflow-x-auto mb-4 sm:mb-6 scrollbar-hide">
+            {TABS.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`pb-2 sm:pb-2.5 px-2 sm:px-3 lg:px-4 text-xs sm:text-sm font-medium transition-colors relative whitespace-nowrap flex-shrink-0 ${
+                  activeTab === tab ? "text-[#D94F1E] font-semibold" : "text-[#888888] hover:text-[#D94F1E]"
+                }`}
+              >
+                {tab}
+                {activeTab === tab && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D94F1E] rounded-t-full" />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Content + Sidebar row */}
+        <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-6">
+
+          {/* Main content - paper list */}
           <div className="flex-1 min-w-0">
-            <HeroSection active={activeTab} setActive={setActiveTab} />
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 sm:gap-3">
               {PAPERS.map((p) => (
                 <PaperCard key={p.title} {...p} />
               ))}
             </div>
           </div>
 
-          {/* Right sidebar */}
-          <div className="hidden lg:block w-[260px] xl:w-[280px] flex-shrink-0 pt-6">
-            <div className="sticky top-6 flex flex-col gap-4">
-              <TrendingGithubCard />
+          {/* Right sidebar - starts BELOW the hero row, aligned with paper list */}
+          <div className="hidden lg:block w-[260px] xl:w-[280px] flex-shrink-0">
+            <div className="top-6 flex flex-col gap-3 sm:gap-4">
               <TrendingXCard />
               <TrendingRedditCard />
             </div>
